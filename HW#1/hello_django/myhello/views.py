@@ -83,7 +83,7 @@ from .models import Course
 
 logger = logging.getLogger('django')
 
-@api_view(['GET'])  # API 仍然使用 GET（符合教授的寫法）
+@api_view(['GET'])  
 def add_course(request):
 
     department = request.GET.get('department', '')

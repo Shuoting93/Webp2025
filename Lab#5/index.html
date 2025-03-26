@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>聖誕樹</title>
+</head>
+<body>
+  <script>
+    function repeatchar(n, arg_char) {
+      return arg_char.repeat(n);
+    }
+
+    function printTreeTop(n) {
+      for (let i = 0; i < n; i++) {
+        const spaces = repeatchar(n - i - 1, ' ');
+        const stars = repeatchar(i * 2 + 1, '*');
+        console.log(spaces + stars);
+      }
+    }
+
+    function printTreeBottom(n) {
+      for (let i = 0; i < 3; i++) {
+        const spaces = repeatchar(n - 1, ' ');
+        console.log(spaces + '*');
+      }
+    }
+
+    function tree(n) {
+      printTreeTop(n);
+      printTreeBottom(n);
+    }
+
+    tree(4);
+  </script>
+</body>
+</html>
